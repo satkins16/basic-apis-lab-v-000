@@ -10,6 +10,8 @@ class RepositoriesController < ApplicationController
       req.params['client_secret'] = 'e2406af2832741e7c8430ba4922f955f70389e55'
       req.params['q'] = params[:query]
     end
+
+    body_hash = JSON.parse(@resp.body)
     render 'search'
   end
 end
